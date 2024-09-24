@@ -49,3 +49,9 @@
 * Harus ada tim support yang dapat dihubungi melalui sistem tiket untuk menangani masalah pengguna.
 * Monitoring sistem secara real-time untuk mendeteksi masalah seperti overload server atau error pada aplikasi.
 * Sistem log yang mendetil untuk membantu dalam pemecahan masalah.
+
+| Aspek     | Kebutuhan Pengguna | Kebutuhan Adimistraktor    |
+|-----------|--------------------|----------|
+| Fungsional| Pendaftaran dan Login, Pemesanan Motor, Histori Traksaksi, pembayaran, Notifikasi| Mengelola data, Restore data, Membackup data  |
+|        | 25   | Bandung  |
+| Charlie   | 35   | Surabaya |
