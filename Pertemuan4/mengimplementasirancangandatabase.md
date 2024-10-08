@@ -15,17 +15,17 @@ Berikut adalah analisis kebutuhan dan fitur untuk proyek Sistem Manajemen Pemeli
 ### 1. Manajemen Kendaraan :
 * Tambah, edit, dan hapus data kendaraan
 * Melihat detail kendaraan (merk, model, tahun, status, dll.)
-### 2. encatatan Pemeliharaan:
+### 2. pencatatan Pemeliharaan:
 * Tambah catatan pemeliharaan (tanggal, jenis pemeliharaan, biaya, teknisi)
 * Melihat riwayat pemeliharaan untuk setiap kendaraan
-### Notifikasi Pemeliharaan:
+### 3. Notifikasi Pemeliharaan:
 * Sistem pengingat untuk pemeliharaan rutin berdasarkan jadwal yang ditentukan
 * Notifikasi untuk pemeliharaan mendesak atau perbaikan
-### Laporan dan Statistik:
+### 4. Laporan dan Statistik:
 * Laporan pemeliharaan per kendaraan
 * Statistik biaya pemeliharaan per periode
 * Ringkasan pemeliharaan yang telah dilakukan
-### Manajemen Pengguna (jika perlu):
+### 5. Manajemen Pengguna (jika perlu):
 * Registrasi dan login untuk teknisi dan admin
 * Hak akses berbeda untuk admin dan teknisi
 
