@@ -1,4 +1,4 @@
-# SISTEM INFORMASI PENDATAAN RENTAL MOTOR BERBASIS WEB
+# SISTEM INFORMASI RENTAL MOTOR BERBASIS WEB
 ## 1. Analisis Kebutuhan dari Sisi Pengguna (User)
 ### - Fungsional:
 ####  Fitur-fitur yang dibutuhkan pengguna:
