@@ -10,6 +10,29 @@ Proyek ini adalah aplikasi sederhana untuk mengelola data kendaraan dengan fitur
 
 ## 2. Formulir Tambah Kendaraan
 Formulir HTML untuk menambahkan data kendaraan dalam file tambah_kendaraan.php:
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Kendaraan</title>
+</head>
+<body>
+    <h1>Tambah Kendaraan</h1>
+    <form action="tambah_kendaraan.php" method="POST">
+        <label for="merk">Merk Kendaraan:</label>
+        <input type="text" name="merk" required><br>
+        <label for="model">Model Kendaraan:</label>
+        <input type="text" name="model" required><br>
+        <label for="tahun">Tahun:</label>
+        <input type="number" name="tahun" required><br>
+        <label for="status">Status Kendaraan:</label>
+        <input type="text" name="status" required><br>
+        <input type="submit" value="Simpan">
+    </form>
+</body>
+</html>
+
 
 ## 3. Menyimpan Data ke Database
 Kode PHP untuk menyimpan data kendaraan ke dalam tabel, berada dalam file tambah_kendaraan.php:
