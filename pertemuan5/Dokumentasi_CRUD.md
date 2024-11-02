@@ -1,6 +1,19 @@
-#aplikasi CRUD berdasarkan kebutuhan dari Sistem Manajemen Pemeliharaan Kendaraan
-##1. Buat Tabel: Formulir Input dan Simpan Data ke Tabel
-###Formulir HTML untuk Tambah Kendaraan (tambah_kendaraan.php):
+CRUD Sistem Manajemen Kendaraan Pemeliharaan
+Proyek ini adalah aplikasi sederhana untuk mengelola data kendaraan dengan fitur CRUD (Create, Read, Update, Delete) yang dibuat menggunakan PHP dan HTML.
+
+1. Struktur Folder
+Folder ini berisi empat file PHP utama:
+
+tambah_kendaraan.php: Menambahkan data kendaraan.
+lihat_kendaraan.php: Menampilkan daftar kendaraan.
+ubah_kendaraan.php: Mengedit data kendaraan.
+hapus_kendaraan.php: Menghapus data kendaraan.
+2. Formulir Tambah Kendaraan
+Formulir HTML untuk menambahkan data kendaraan dalam file tambah_kendaraan.php:
+
+Bahasa Indonesia
+
+Salin kode
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -27,10 +40,13 @@
     </form>
 </body>
 </html>
+3. Menyimpan Data ke Database
+Kode PHP untuk menyimpan data kendaraan ke dalam tabel, berada dalam file tambah_kendaraan.php:
 
-###PHP untuk menyimpan Data ke Tabel (tambah_kendaraan.php):
+bahasa inggris
+
+Salin kode
 <?php
-// Koneksi ke database
 $conn = new mysqli('localhost', 'root', '', 'pemeliharaan_kendaraan');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -39,7 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tahun = $_POST['tahun'];
     $status = $_POST['status'];
 
-    // SQL Query untuk menyimpan data
     $sql = "INSERT INTO kendaraan (merk, model, tahun, status) VALUES ('$merk', '$model', '$tahun', '$status')";
 
     if ($conn->query($sql) === TRUE) {
@@ -51,14 +66,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $conn->close();
 ?>
+4. Menampilkan Daftar Kendaraan
+File lihat_kendaraan.phpyang digunakan untuk membaca dan menampilkan daftar kendaraan:
 
-##2. Baca Tabel: Menampilkan Data dari Tabel
-###PHP untuk Menampilkan Data (lihat_kendaraan.php):
+bahasa inggris
+
+Salin kode
 <?php
-// Koneksi ke database
 $conn = new mysqli('localhost', 'root', '', 'pemeliharaan_kendaraan');
 
-// SQL Query untuk mengambil data kendaraan
 $sql = "SELECT * FROM kendaraan";
 $result = $conn->query($sql);
 
@@ -73,7 +89,6 @@ if ($result->num_rows > 0) {
                 <th>Status</th>
                 <th>Aksi</th>
             </tr>";
-    // Looping data dan menampilkannya
     while ($row = $result->fetch_assoc()) {
         echo "<tr>
                 <td>" . $row['id'] . "</td>
@@ -94,11 +109,13 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
+5. Mengedit Data Kendaraan
+File ubah_kendaraan.phpuntuk mengedit data kendaraan berdasarkan ID:
 
-##3. Update Tabel: Mengedit Data
-###Form HTML untuk Mengedit Kendaraan (ubah_kendaraan.php):
+bahasa inggris
+
+Salin kode
 <?php
-// Koneksi ke database
 $conn = new mysqli('localhost', 'root', '', 'pemeliharaan_kendaraan');
 
 $id = $_GET['id'];
@@ -141,7 +158,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tahun = $_POST['tahun'];
     $status = $_POST['status'];
 
-    // SQL Query untuk update data
     $sql = "UPDATE kendaraan SET merk='$merk', model='$model', tahun='$tahun', status='$status' WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
@@ -153,16 +169,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $conn->close();
 }
 ?>
+6. Menghapus Data Kendaraan
+File hapus_kendaraan.phpyang digunakan untuk menghapus data kendaraan:
 
-##4. Hapus: Menghapus Data
-###PHP untuk Menghapus Data (hapus_kendaraan.php):
+bahasa inggris
+
+Salin kode
 <?php
-// Koneksi ke database
 $conn = new mysqli('localhost', 'root', '', 'pemeliharaan_kendaraan');
 
 $id = $_GET['id'];
 
-// SQL Query untuk menghapus data
 $sql = "DELETE FROM kendaraan WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
@@ -173,7 +190,5 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-// Redirect ke halaman daftar kendaraan
 header("Location: lihat_kendaraan.php");
 ?>
-
