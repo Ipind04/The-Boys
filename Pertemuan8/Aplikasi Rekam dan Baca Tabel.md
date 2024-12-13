@@ -1,5 +1,5 @@
-## Struktur Tabel (MySQL)
-### Query Tabel books
+##  Struktur Tabel (MySQL)
+### 1 Query Tabel books
 ```
 CREATE TABLE books (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -10,7 +10,7 @@ CREATE TABLE books (
 );
 
 ```
-### Formulir Input dan Proses Perekaman Data
+### 2 Formulir Input dan Proses Perekaman Data
 #### Membuat file bernama create_book.php:
 ```
 <?php
@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </html>
 ```
 
-### Membaca Data dari Tabel
+### 3 Membaca Data dari Tabel
 #### Buat file bernama read_books.php
 ```
 <?php
@@ -136,3 +136,5 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </body>
 </html>
 ```
+## Output 
+### 
