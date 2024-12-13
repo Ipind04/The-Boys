@@ -146,5 +146,7 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ### Mengimput data 3
 ![menginput data3](https://github.com/user-attachments/assets/264cd2da-83eb-48f1-8b51-1491c1e0741c)
 
+### Daftar buku yang di tambahkan 
+![daftar buku](https://github.com/user-attachments/assets/4efe8a0c-363b-4c27-b1f8-38179988c9d6)
 
 
