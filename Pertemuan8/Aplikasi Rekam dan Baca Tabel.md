@@ -137,4 +137,14 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </html>
 ```
 ## Output 
-### 
+### Mengimput data 1
+![menginput data](https://github.com/user-attachments/assets/67c2b6c0-9974-48a1-b2a0-4513622cd583)
+
+### Mengimput data 2
+![menginput data2](https://github.com/user-attachments/assets/33d91074-e312-4ca6-bc30-504dca5ee594)
+
+### Mengimput data 3
+![menginput data3](https://github.com/user-attachments/assets/264cd2da-83eb-48f1-8b51-1491c1e0741c)
+
+
+
