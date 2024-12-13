@@ -149,7 +149,7 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ### Daftar buku yang di tambahkan 
 ![daftar buku](https://github.com/user-attachments/assets/4efe8a0c-363b-4c27-b1f8-38179988c9d6)
 
-### Database dan Tabel
+### data yang tersimpan pada Database dan Tabel
 ![Data base dan Tabel](https://github.com/user-attachments/assets/bc0f539d-6279-43cc-8dad-3b64ac49d80a)
 
 
